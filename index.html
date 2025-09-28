@@ -179,6 +179,10 @@
       background: linear-gradient(45deg, #1877f2, #42a5f5);
     }
     
+    .contact-link:nth-child(5):hover {
+      background: linear-gradient(45deg, #fd1d1d, #fcb045); /* Instagram-like gradient */
+    }
+    
     .cta-buttons {
       display: flex;
       gap: 20px;
@@ -531,27 +535,23 @@
       font-size: 1rem;
     }
 
-    .edu-sub { /* degree / program */
-      color: rgba(255,255,255,0.9);
-      font-size: 0.90rem;
-      margin-top: 3px;
-      /* margin-right: -86px; */
-    }
-
-    /* Show duration beside each degree/program line */
+    /* degree / program: compact inline layout so duration sits close to the text */
     .edu-sub {
-      display: flex;
-      justify-content: space-between;
+      color: rgba(255,255,255,0.92);
+      font-size: 0.92rem;
+      margin-top: 3px;
+      display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: 8px; /* reduce gap to remove excessive spacing */
     }
 
     .edu-duration-inline {
-      color: rgba(255,255,255,0.85);
-      font-size: 0.82rem;
+      color: rgba(255,255,255,0.82);
+      font-size: 0.78rem;
       white-space: nowrap;
-      font-weight: 600;
-      margin-left: 8px;
+      font-weight: 500;
+      margin-left: 6px;
+      opacity: 0.95;
     }
 
     /* Add emoji bullet in front of degree/program lines */
@@ -771,6 +771,83 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
+    /* Compact contact variant */
+    .contact-compact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 20px;
+      border-radius: 12px;
+      /* Make the contact block span the same width as other .section content */
+      width: 100%;
+      max-width: 100%;
+      margin: 0; /* .section already centers content */
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact-compact .contact-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .contact-compact .contact-item {
+      font-size: 0.95rem;
+      color: white;
+      gap: 8px;
+    }
+
+    .contact-compact .btn-small {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      border-radius: 999px;
+    }
+    
+    /* Compact connect form */
+    .connect-form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 260px;
+      max-width: 420px;
+    }
+
+    .connect-form input,
+    .connect-form textarea {
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.03);
+      color: white;
+      outline: none;
+      font-size: 0.95rem;
+    }
+
+    /* Placeholder color for connect form inputs */
+    .connect-form input::placeholder,
+    .connect-form textarea::placeholder {
+      color: rgba(255,255,255,0.7);
+      opacity: 1; /* ensure consistent opacity across browsers */
+    }
+
+    /* Vendor-prefixed placeholder selectors for wider browser support */
+    .connect-form input:-ms-input-placeholder,
+    .connect-form textarea:-ms-input-placeholder {
+      color: rgba(255,255,255,0.7);
+    }
+    .connect-form input::-ms-input-placeholder,
+    .connect-form textarea::-ms-input-placeholder {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .connect-form textarea { min-height: 80px; resize: vertical; }
+
+    .connect-form .form-row { display: flex; gap: 8px; }
+
+    .connect-form .form-row input { flex: 1; }
     
     /* Responsive */
     @media (max-width: 768px) {
@@ -950,6 +1027,9 @@
           <a href="https://facebook.com/nabila.shova" class="contact-link" title="Facebook" target="_blank">
             <i class="fab fa-facebook-f"></i>
           </a>
+          <a href="https://instagram.com/nb.shova" class="contact-link" title="Instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
         <!-- <div class="cta-buttons">
           <a href="Nabila Bilkis Shova_0.1.pdf" download class="btn btn-primary">
@@ -985,28 +1065,13 @@
             </div>
           </li>
 
-          <!-- <li class="education-item">
-            <div class="edu-left">
-              <div class="edu-institution">East West University</div>
-              <div class="edu-sub">BSc. in CSE- <span style="font-style: italic;">CGPA: 3.74/4.00</span></div>
-            </div>
-            <div class="edu-duration">2013 — 2017</div>
-          </li> -->
-
           <li class="education-item">
             <div class="edu-left">
-              <div class="edu-institution">Viqarunnisa Noon School & College</div>
+              <div class="edu-institution">Viqarunnisa Noon School &amp; College</div>
               <div class="edu-sub">Higher Secondary Certificate- <span style="font-style: italic;">GPA: 5.00/5.00</span><span class="edu-duration-inline">2012 — 2014</span></div>
-              <div class="edu-sub">Secondary School Certificate (SSC)- <span style="font-style: italic;">GPA: 5.00/5.00</span><span class="edu-duration-inline">2002 — 2012</span></div>
+              <div class="edu-sub"><span class="degree-nowrap">Secondary School Certificate- </span> <span style="font-style: italic;">GPA: 5.00/5.00</span><span class="edu-duration-inline">2002 — 2012</span></div>
             </div>
           </li>
-          <!-- <li class="education-item">
-            <div class="edu-left">
-              <div class="edu-institution">Viqarunnisa Noon School & College</div>
-              <div class="edu-sub">Secondary School Certificate (SSC)</div>
-            </div>
-            <div class="edu-duration">2009 — 2011</div>
-          </li> -->
         </ul>
       </div>
       <div class="card animate-in">
@@ -1017,15 +1082,13 @@
         <ul>
           <li>Graduate Teaching Assistant <span style="margin-left: 20%; font-size: 12px;">[May'19 ~ Jun'19]</span></li>
           <li>Undergraduate Teaching Assistant <span style="margin-left: 12%; font-size: 12px;">[Jan'17 ~ Apr'19]</span></li>
-          <span style="padding-left: 10%; font-size: 14px;">🎯 Prepared course materials & graded assignments</span><br>
-          <span style="padding-left: 10%; font-size: 14px;">🎯 Conducted lab sessions & mentored students</span><br>
-          <span style="padding-left: 10%; font-size: 14px;">🎯 Helped students with course-work & problem-solving</span>
+          <span style="padding-left: 10%; font-size: 14px;">🎯 Prepared course materials &amp; graded assignments</span><br>
+          <span style="padding-left: 10%; font-size: 14px;">🎯 Conducted lab sessions &amp; mentored students</span><br>
+          <span style="padding-left: 10%; font-size: 14px;">🎯 Helped students with course-work &amp; problem-solving</span>
         </ul>
       </div>
-      </div>
-    </section>
-
-  <!-- Professional Section -->
+    </div>
+  </section>
   <section id="professional" class="section">
     <h2 class="section-title">Professional Journey</h2>
     <div class="card-grid">
@@ -1035,10 +1098,14 @@
         </div>
         <h3>Development Expertise</h3>
         <ul>
-          <li>5 years of experience in Web & Mobile App Development</li>
-          <li>Expert in PHP, Laravel, MySQL</li>
-          <li>Android & iOS Development</li>
-          <li>Full-stack development solutions</li>
+          <li>Software Engineer with five years of experience at Samsung Electronics</li>
+          <li>Expertise in machine learning, data analytics, and software development</li>
+          <li>Full-stack developer with strong analytical and problem-solving skills</li>
+          <li>Hands-on experience in applying advanced algorithms to optimize efficiency and system performance</li>
+          <li>Design &amp; develop advanced web applications using Laravel, CodeIgniter, PHP, JavaScript &amp; MySQL</li>
+          <li>Build prototypes with efficient database &amp; UI design and query optimization for cost-effective solutions</li>
+          <li>Data analysis with ML models and graphical interface design for engaging &amp; effective data visualization</li>
+          <li>Continuous integration, XSS mitigation and troubleshooting critical issues for system security and performance optimization</li>
         </ul>
       </div>
       <div class="card animate-in">
@@ -1047,10 +1114,12 @@
         </div>
         <h3>Innovation & Leadership</h3>
         <ul>
-          <li>TWS Technology Patent</li>
-          <li>Emergency Chatbot System Patent</li>
-          <li>Research publications</li>
-          <li>Technology innovation projects</li>
+          <li>Skilled in leading teams, managing projects, and driving organizational success</li>
+          <li>Strong presentation and communication skills, developed as a Teaching Assistant &amp; Project Coordinator</li>
+          <li>Passionate about innovation and creating intelligent, data-driven solutions</li>
+          <li>Delivered technology innovation projects and contributed to research publications</li>
+          <li>Database design, middleware design and maintenance support for automation tools</li>
+          <li>Designed &amp; implemented attractive UI and prepared project documentation</li>
         </ul>
       </div>
       </div>
@@ -1192,7 +1261,6 @@
               <div class="slide-desc">Project management fundamentals with practical frameworks for delivery and team leadership.</div>
             </div>
           </div>
-
         </div>
         <div class="slider-nav">
           <button class="slider-dot active" onclick="currentSlide(1, 'cert')"></button>
@@ -1202,8 +1270,8 @@
           <button class="slider-dot" onclick="currentSlide(5, 'cert')"></button>
         </div>
       </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
   <!-- Awards Section -->
   <!-- removed old technical skills block (replaced with expanded section before Certificates) -->
@@ -1338,30 +1406,43 @@
 
   <!-- Contact Section -->
   <section id="contact" class="section">
-    <div class="contact">
-      <h3>Let's Connect</h3>
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <span>shovanabila@gmail.com</span>
+    <div class="contact-compact" style="flex-direction:column; align-items:flex-start; gap:12px; padding:22px;">
+      <h3 style="margin:0; color:white; font-size:1.25rem;">Let's Connect</h3>
+      <div style="display:flex; gap:18px; align-items:center; width:100%; justify-content:space-between;">
+        <div style="display:flex; gap:18px; align-items:center;">
+          <div class="contact-links" style="display:flex; gap:10px;">
+            <a class="contact-link" href="mailto:shovanabila@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a class="contact-link" href="https://www.linkedin.com/in/nabila-b-shova" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a class="contact-link" href="https://www.facebook.com/nabila.shova" target="_blank" rel="noopener" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="contact-link" href="https://www.instagram.com/nb.shova" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
         </div>
-        <div class="contact-item">
-          <i class="fab fa-linkedin"></i>
-          <span>LinkedIn</span>
-        </div>
-        <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <span>GitHub</span>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-graduation-cap"></i>
-          <span>ResearchGate</span>
+        <div style="display:flex; align-items:center;">
+          <a class="btn btn-secondary btn-small" href="Nabila Bilkis Shova_0.1.pdf" download aria-label="Download CV" style="display:inline-flex; align-items:center; gap:8px;">
+            <i class="fas fa-download"></i>
+            Download CV
+          </a>
         </div>
       </div>
-      <a href="Nabila Bilkis Shova_0.1.pdf" download class="btn btn-secondary">
-        <i class="fas fa-download"></i>
-        Download CV (PDF)
-      </a>
+      <form class="connect-form" onsubmit="submitContactForm(event)">
+        <div class="form-row">
+          <input id="name" type="text" placeholder="Your name" required />
+          <input id="email" type="email" placeholder="Your email" required />
+        </div>
+        <input id="subject" type="text" placeholder="Subject" />
+        <textarea id="message" placeholder="Message" required></textarea>
+        <div style="display:flex; justify-content:flex-end;">
+          <button type="submit" class="btn btn-primary btn-small">Send Message</button>
+        </div>
+      </form>
     </div>
   </section>
   </div>
@@ -1407,8 +1488,8 @@
     }
 
     // Auto-slide functionality (supports cert, award, activities)
-    const slideIntervals = {};
-    function autoSlide(type, totalSlides, intervalMs = 10000) {
+  const slideIntervals = {};
+  function autoSlide(type, totalSlides, intervalMs = 5000) {
       // clear existing interval if any
       if (slideIntervals[type]) clearInterval(slideIntervals[type]);
       slideIntervals[type] = setInterval(() => {
@@ -1445,10 +1526,10 @@
       }
     }
 
-    // Start auto-sliding with 10s interval
-    autoSlide('cert', 5, 10000);
-    autoSlide('award', 3, 10000);
-    autoSlide('activities', 4, 10000);
+  // Start auto-sliding with 5s interval
+  autoSlide('cert', 5, 5000);
+  autoSlide('award', 3, 5000);
+  autoSlide('activities', 4, 5000);
 
     // Intersection Observer for animations
     const observerOptions = {
@@ -1558,6 +1639,10 @@
     // Set initial active state
     document.addEventListener('DOMContentLoaded', () => {
       updateActiveNav();
+      // Initialize sliders to first slide so dots and tracks are synced
+      currentSlide(1, 'cert');
+      currentSlide(1, 'award');
+      currentSlide(1, 'activities');
     });
 
     // Copy email helper
