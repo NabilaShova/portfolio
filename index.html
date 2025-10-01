@@ -1363,15 +1363,6 @@
               <div class="slide-desc">Led the organization and presentation of Junior SW Academy, a CSR initiative to provide basic IT training to underprivileged students.</div>
             </div>
           </div>
-          <!-- <div class="slider-item">
-            <div class="slide-content">
-              <div class="slide-image">
-                <img src="assets/activities/jsa_2.jpg" alt="Activity 2">
-                <div class="slide-caption">Junior Software Academy</div>
-              </div>
-              <div class="slide-desc">Hosting the Junior SW Academy Event.</div>
-            </div>
-          </div> -->
           <div class="slider-item">
             <div class="slide-content">
               <div class="slide-image">
@@ -1388,6 +1379,15 @@
                 <div class="slide-caption">Course Instructor</div>
               </div>
               <div class="slide-desc">Conducted basic coding classes (C language) for underprivileged students as part of CSR initiatives.</div>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="slide-content">
+              <div class="slide-image">
+                <img src="assets/activities/long service.jpeg" alt="Activity 2">
+                <div class="slide-caption">Long Service Award</div>
+              </div>
+              <div class="slide-desc">Received the Long Service Award for 5 amazing years at Samsung, recognizing a journey of learning, innovation, and collaborative achievements.</div>
             </div>
           </div>
           <div class="slider-item">
@@ -1425,7 +1425,7 @@
           <button class="slider-dot" onclick="currentSlide(4, 'activities')"></button>
           <button class="slider-dot" onclick="currentSlide(5, 'activities')"></button>
           <button class="slider-dot" onclick="currentSlide(6, 'activities')"></button>
-          <!-- <button class="slider-dot" onclick="currentSlide(7, 'activities')"></button> -->
+          <button class="slider-dot" onclick="currentSlide(7, 'activities')"></button>
         </div>
       </div>
     </div>
@@ -1549,7 +1549,7 @@
         currentSlide(currentAwardSlide, 'award');
         autoSlide('award', total);
       } else if (type === 'activities') {
-        const total = 6;
+        const total = 7;
         currentActivitiesSlide = ((currentActivitiesSlide - 1 + delta + total) % total) + 1;
         currentSlide(currentActivitiesSlide, 'activities');
         autoSlide('activities', total);
@@ -1559,7 +1559,7 @@
   // Start auto-sliding with 6s interval
   autoSlide('cert', 5, 6000);
   autoSlide('award', 2, 6000);
-  autoSlide('activities', 6, 6000);
+  autoSlide('activities', 7, 6000);
 
     // Intersection Observer for animations
     const observerOptions = {
