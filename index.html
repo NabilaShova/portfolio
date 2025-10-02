@@ -290,7 +290,7 @@
     
     .sidebar-title {
       color: white;
-  font-family: 'Poppins', 'Inter', sans-serif;
+      font-family: 'Poppins', 'Inter', sans-serif;
       font-size: 1.15rem;
       font-weight: 600;
       margin-bottom: 5px;
@@ -324,6 +324,7 @@
       padding: 10px 16px;
       color: rgba(255,255,255,0.8);
       text-decoration: none;
+      font-size: 0.92rem;
       font-weight: 500;
       transition: all 0.3s ease;
       border-left: 3px solid transparent;
@@ -532,7 +533,7 @@
     .edu-institution {
       font-weight: 600;
       color: #ffffff;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
     /* degree / program: compact inline layout so duration sits close to the text */
@@ -547,7 +548,7 @@
 
     .edu-duration-inline {
       color: rgba(255,255,255,0.82);
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       white-space: nowrap;
       font-weight: 500;
       margin-left: 6px;
@@ -559,7 +560,7 @@
       content: '🎯 ';
       display: inline-block;
       margin-right: 6px;
-      font-size: 0.90rem;
+      font-size: 0.85rem;
     }
 
     .edu-duration {
@@ -587,7 +588,7 @@
       padding: 8px 0;
       position: relative;
       padding-left: 25px;
-      font-size: 1rem;
+      font-size: 0.90rem;
     }
     
     .card li::before {
@@ -1069,7 +1070,7 @@
         <ul class="education-list">
           <li class="education-item">
             <div class="edu-left">
-              <div class="edu-institution">Teaching Assistant<span class="edu-duration-inline">2017 — 2019</span></div>
+              <div class="edu-institution">Teaching Assistant, East West University<span class="edu-duration-inline">2017 — 2019</span></div>
               <div class="edu-sub">Prepared course materials & graded assignments</div>
               <div class="edu-sub">Conducted lab sessions & mentored students</div>
             </div>
@@ -1217,7 +1218,7 @@
             <div class="slide-content">
               <div class="slide-image">
                 <img src="assets/certificates/bsc_scholarship.jpg" alt="Certificate 1">
-                <div class="slide-caption">Bachelors Merit Scholarship</div>
+                <div class="slide-caption">Merit Scholarship Certificate</div>
               </div>
               <div class="slide-desc">Awarded 100% Merit Scholarship for outstanding academic performance during BSc program.</div>
             </div>
@@ -1225,7 +1226,16 @@
           <div class="slider-item">
             <div class="slide-content">
               <div class="slide-image">
-                <img src="assets/certificates/copc_certificate.jpg" alt="Certificate 2">
+                <img src="assets/certificates/jsa.jpg" alt="Certificate 2">
+                <div class="slide-caption">Certificate of Appreciation</div>
+              </div>
+              <div class="slide-desc">Received a Certificate of Appreciation for volunteer work in providing basic IT training to Junior SW Academy participants.</div>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="slide-content">
+              <div class="slide-image">
+                <img src="assets/certificates/copc_certificate.jpg" alt="Certificate 3">
                 <div class="slide-caption">COPC Certificate</div>
               </div>
               <div class="slide-desc">Awarded a certificate for securing 4th place in the “War of Beginner and Intermediate Programmers” coding contest.</div>
@@ -1234,7 +1244,7 @@
           <div class="slider-item">
             <div class="slide-content">
               <div class="slide-image">
-                <img src="assets/certificates/reactjs.jpeg" alt="Certificate 3">
+                <img src="assets/certificates/reactjs.jpeg" alt="Certificate 4">
                 <div class="slide-caption">React.js Training</div>
               </div>
               <div class="slide-desc">Hands-on course on modern React patterns and hooks for building web UIs.</div>
@@ -1243,7 +1253,7 @@
           <div class="slider-item">
             <div class="slide-content">
               <div class="slide-image">
-                <img src="assets/certificates/js.jpeg" alt="Certificate 4">
+                <img src="assets/certificates/js.jpeg" alt="Certificate 5">
                 <div class="slide-caption">JavaScript Mastery</div>
               </div>
               <div class="slide-desc">Advanced JavaScript training covering ES6+, asynchronous programming, and tooling.</div>
@@ -1252,7 +1262,7 @@
           <div class="slider-item">
             <div class="slide-content">
               <div class="slide-image">
-                <img src="assets/certificates/pm.jpeg" alt="Certificate 5">
+                <img src="assets/certificates/pm.jpeg" alt="Certificate 6">
                 <div class="slide-caption">Project Management</div>
               </div>
               <div class="slide-desc">Project management fundamentals with practical frameworks for delivery and team leadership.</div>
@@ -1265,6 +1275,7 @@
           <button class="slider-dot" onclick="currentSlide(3, 'cert')"></button>
           <button class="slider-dot" onclick="currentSlide(4, 'cert')"></button>
           <button class="slider-dot" onclick="currentSlide(5, 'cert')"></button>
+          <button class="slider-dot" onclick="currentSlide(6, 'cert')"></button>
         </div>
       </div>
     </div>
@@ -1294,13 +1305,13 @@
                 <img src="assets/awards/excellence.jpg" alt="Award 2">
                 <div class="slide-caption">Excellence Award</div>
               </div>
-              <div class="slide-desc">Recognized for exceptional performance and contributions to the company from July ~ December 2024.</div>
+              <div class="slide-desc">Recognized with Excellence Award for exceptional performance and contributions to the company from July ~ December 2024.</div>
             </div>
           </div>
           <!-- <div class="slider-item">
             <div class="slide-content">
               <div class="slide-image">
-                <img src="https://via.placeholder.com/600x400/764ba2/ffffff?text=Award+3" alt="Award 3">
+                <img src="assets/awards/jsa.jpg" alt="Award 3">
                 <div class="slide-caption">Special Recognition</div>
               </div>
               <div class="slide-desc">Special recognition for leadership in student projects and initiatives.</div>
@@ -1434,7 +1445,7 @@
   <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="contact-compact" style="flex-direction:column; align-items:flex-start; gap:12px; padding:22px;">
-      <h3 style="margin:0; color:white; font-size:1.25rem;">Let's Connect</h3>
+      <h3 style="margin:0; color:white; font-size:1.25rem;">Let's Connect!</h3>
       <div style="display:flex; gap:18px; align-items:center; width:100%; justify-content:space-between;">
         <div style="display:flex; gap:18px; align-items:center;">
           <div class="contact-links" style="display:flex; gap:10px;">
@@ -1539,7 +1550,7 @@
     // Manual controls: move by delta (-1 or +1) and reset auto timer
     function manualSlide(type, delta) {
       if (type === 'cert') {
-        const total = 5;
+        const total = 6;
         currentCertSlide = ((currentCertSlide - 1 + delta + total) % total) + 1;
         currentSlide(currentCertSlide, 'cert');
         autoSlide('cert', total); // reset timer
@@ -1557,9 +1568,9 @@
     }
 
   // Start auto-sliding with 6s interval
-  autoSlide('cert', 5, 6000);
-  autoSlide('award', 2, 6000);
-  autoSlide('activities', 7, 6000);
+  autoSlide('cert', 6, 8000);
+  autoSlide('award', 2, 8000);
+  autoSlide('activities', 7, 8000);
 
     // Intersection Observer for animations
     const observerOptions = {
