@@ -1293,35 +1293,35 @@
           <div class="slider-item">
             <div class="slide-content">
               <div class="slide-image">
-                <img src="assets/awards/icon2.jpg" alt="Award 1">
-                <div class="slide-caption">Icon Award</div>
+                <img src="assets/awards/icon1.jpg" alt="Award 1">
+                <div class="slide-caption">Icon Award 2020</div>
               </div>
-              <div class="slide-desc">Received Icon Award for exceptional performance and contributions to the company.</div>
+              <div class="slide-desc">Received Icon Award for Human Resource Management System automation during September ~ December 2020.</div>
             </div>
           </div>
           <div class="slider-item">
             <div class="slide-content">
               <div class="slide-image">
-                <img src="assets/awards/excellence.jpg" alt="Award 2">
-                <div class="slide-caption">Excellence Award</div>
+                <img src="assets/awards/icon2.jpg" alt="Award 2">
+                <div class="slide-caption">Icon Award 2024</div>
+              </div>
+              <div class="slide-desc">Received Icon Award for system performance optimization with better security and advanced features.</div>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="slide-content">
+              <div class="slide-image">
+                <img src="assets/awards/excellence.jpg" alt="Award 3">
+                <div class="slide-caption">Excellence Award 2024</div>
               </div>
               <div class="slide-desc">Recognized with Excellence Award for exceptional performance and contributions to the company from July ~ December 2024.</div>
             </div>
           </div>
-          <!-- <div class="slider-item">
-            <div class="slide-content">
-              <div class="slide-image">
-                <img src="assets/awards/jsa.jpg" alt="Award 3">
-                <div class="slide-caption">Special Recognition</div>
-              </div>
-              <div class="slide-desc">Special recognition for leadership in student projects and initiatives.</div>
-            </div>
-          </div> -->
         </div>
         <div class="slider-nav">
           <button class="slider-dot active" onclick="currentSlide(1, 'award')"></button>
           <button class="slider-dot" onclick="currentSlide(2, 'award')"></button>
-          <!-- <button class="slider-dot" onclick="currentSlide(3, 'award')"></button> -->
+          <button class="slider-dot" onclick="currentSlide(3, 'award')"></button>
         </div>
       </div>
       </div>
@@ -1555,7 +1555,7 @@
         currentSlide(currentCertSlide, 'cert');
         autoSlide('cert', total); // reset timer
       } else if (type === 'award') {
-        const total = 2;
+        const total = 3;
         currentAwardSlide = ((currentAwardSlide - 1 + delta + total) % total) + 1;
         currentSlide(currentAwardSlide, 'award');
         autoSlide('award', total);
@@ -1569,7 +1569,7 @@
 
   // Start auto-sliding with 6s interval
   autoSlide('cert', 6, 8000);
-  autoSlide('award', 2, 8000);
+  autoSlide('award', 3, 8000);
   autoSlide('activities', 7, 8000);
 
     // Intersection Observer for animations
